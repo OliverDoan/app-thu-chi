@@ -6,7 +6,12 @@
       "Bash(npx shadcn@latest init -d 2>&1)",
       "Bash(npx shadcn@latest add input label textarea select dialog sheet tabs card badge separator scroll-area -y 2>&1)",
       "Bash(npm run build 2>&1)",
-      "Bash(npx shadcn@latest add sonner alert-dialog -y 2>&1)"
+      "Bash(npx shadcn@latest add sonner alert-dialog -y 2>&1)",
+      "Bash(find /Users/doanvietthuan/Documents/home/app-thu-chi -maxdepth 2 -type f \\\\\\( -name \".env*\" -o -name \"tsconfig.json\" -o -name \"*.env\" \\\\\\) 2>/dev/null | grep -v node_modules)",
+      "Bash(npm install @clerk/nextjs)",
+      "Bash(npm install @clerk/localizations)",
+      "WebSearch",
+      "WebFetch(domain:clerk.com)"
     ]
   }
 }
