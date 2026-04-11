@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --turbopack 2>&1)",
       "Bash(npm install dexie zustand zod recharts lucide-react date-fns 2>&1)",
-      "Bash(npx shadcn@latest init -d 2>&1)"
+      "Bash(npx shadcn@latest init -d 2>&1)",
+      "Bash(npx shadcn@latest add input label textarea select dialog sheet tabs card badge separator scroll-area -y 2>&1)",
+      "Bash(npm run build 2>&1)",
+      "Bash(npx shadcn@latest add sonner alert-dialog -y 2>&1)"
     ]
   }
 }
