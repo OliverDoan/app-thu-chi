@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="coin" x1="200" y1="160" x2="360" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- Wallet body -->
+  <rect x="96" y="168" width="320" height="224" rx="32" fill="white" opacity="0.95"/>
+  <!-- Wallet flap -->
+  <path d="M128 200 V148 C128 128 144 112 164 112 H348 C368 112 384 128 384 148 V168" stroke="white" stroke-width="32" fill="none" stroke-linecap="round" opacity="0.95"/>
+  <rect x="96" y="168" width="320" height="36" rx="0" fill="white" opacity="0.95"/>
+  <!-- Coin circle -->
+  <circle cx="320" cy="296" r="52" fill="url(#coin)"/>
+  <circle cx="320" cy="296" r="40" fill="none" stroke="#d97706" stroke-width="3" opacity="0.5"/>
+  <!-- Dong symbol -->
+  <text x="320" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#92400e">&#x20ab;</text>
+  <!-- Up arrow (thu) -->
+  <path d="M168 316 L168 260 M148 280 L168 256 L188 280" stroke="#10b981" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Down arrow (chi) -->
+  <path d="M228 260 L228 316 M208 296 L228 320 L248 296" stroke="#ef4444" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

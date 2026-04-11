@@ -17,8 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thu Chi - Quản Lý Chi Tiêu",
+  title: "Quản Lý Chi Tiêu | OliverDoan",
   description: "Ứng dụng quản lý thu chi cá nhân",
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export const viewport: Viewport = {
