@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useUser, useClerk } from '@clerk/nextjs'
+import { useAuth } from '@/lib/auth'
 import { ChevronRight, Tags, PiggyBank, LogOut, User } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
@@ -26,12 +26,11 @@ const settingsItems = [
 ]
 
 export default function SettingsPage() {
-  const { user, isLoaded } = useUser()
-  const { signOut } = useClerk()
+  const { user, isLoaded, signOut } = useAuth()
   const router = useRouter()
 
-  const handleSignOut = async () => {
-    await signOut()
+  const handleSignOut = () => {
+    signOut()
     router.push('/sign-in')
   }
 
@@ -45,19 +44,15 @@ export default function SettingsPage() {
         <h2 className="text-sm font-medium text-muted-foreground mb-3">Tài khoản</h2>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-            {isLoaded && user?.imageUrl ? (
-              <img src={user.imageUrl} alt="Avatar" className="h-full w-full object-cover" />
-            ) : (
-              <User className="h-5 w-5 text-primary" />
-            )}
+            <User className="h-5 w-5 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate">
-              {isLoaded ? (user?.fullName || user?.primaryEmailAddress?.emailAddress || 'Người dùng') : '...'}
+              {isLoaded ? (user?.fullName || user?.email || 'Người dùng') : '...'}
             </p>
-            {isLoaded && user?.primaryEmailAddress?.emailAddress && user?.fullName && (
+            {isLoaded && user?.email && user?.fullName && (
               <p className="text-xs text-muted-foreground truncate">
-                {user.primaryEmailAddress.emailAddress}
+                {user.email}
               </p>
             )}
           </div>

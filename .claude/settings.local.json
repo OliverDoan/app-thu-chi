@@ -11,7 +11,15 @@
       "Bash(npm install @clerk/nextjs)",
       "Bash(npm install @clerk/localizations)",
       "WebSearch",
-      "WebFetch(domain:clerk.com)"
+      "WebFetch(domain:clerk.com)",
+      "Bash(npx next build 2>&1 | tail -50)",
+      "Bash(npm uninstall @clerk/nextjs @clerk/localizations 2>&1)",
+      "Bash(npx next build 2>&1 | tail -30)",
+      "Bash(rm -rf node_modules && pnpm install 2>&1)",
+      "Bash(pnpm build 2>&1 | tail -30)",
+      "Bash(kill -9 22337 2>/dev/null; sleep 1; lsof -ti:3000 2>/dev/null || echo \"Port 3000 đã free\")",
+      "Bash(lsof -ti:3000 | xargs kill -9 2>/dev/null; sleep 1; lsof -ti:3000 2>/dev/null || echo \"Port 3000 đã free\")",
+      "Bash(lsof -i :3000 2>/dev/null)"
     ]
   }
 }
